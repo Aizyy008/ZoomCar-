@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Open+Sans&display=swap");
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+nav.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.navbar img {
+  max-height: 50px;
+}
+
+nav.navbar button {
+  background-color: white;
+  border: none;
+  color: #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cont1 {
+  background-image: url('images/header.png');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+#cont12 img {
+  max-width: 200px;
+}
+
+#cont12 button,
+#cont13 button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#cont2 {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cont21 button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+#cont22 {
+  text-align: center;
+  padding: 1rem 1rem;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  background-color: #e9ecef;
+}
+
+.slideshow-cont {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.mySlides img {
+  width: 100%;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+#cont24 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+
+#cont24 div {
+  flex: 1 1 30%;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cont24 h4 {
+  margin-top: 0;
+}
+
+#cont24 p {
+  margin-bottom: 0;
+}
+
+#cont24 .button-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#cont24 button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cont24 a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+#cont3, #cont5, #cont6 {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+#cont3 img, #cont5 img, #cont6 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#cont4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+
+#cont4 div {
+  flex: 1 1 30%;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+
+#cont4 h4 {
+  margin-top: 0;
+}
+
+#cont4 p {
+  margin-bottom: 0;
+}
+
+#cont4 img {
+  max-width: 100%;
+  height: auto;
+  
+  border-radius: 10px;
+}
+
+#cont7 {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: green;
+  color: white;
+}
+
+#cont8 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+
+#cont8 div {
+  flex: 1 1 30%;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#cont8 h3 {
+  margin-top: 0;
+}
+
+#cont8 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#cont9 {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #e9ecef;
+}
+
+#cont9 input {
+  width: calc(50% - 1rem);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#cont9 input[type="submit"] {
+  background-color: green;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#cont11 {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #343a40;
+  color: white;
+}
+
+#cont11 img {
+  max-height: 50px;
+}
+
+#cont11 h5 {
+  margin-top: 1rem;
+}

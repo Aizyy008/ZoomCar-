@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Information</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    h2 {
+        color: #2ecc71; /* Green color */
+        text-align: center;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 5px;
+        color: #333333; /* Black color */
+    }
+    
+    select, input[type="text"], button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    select {
+        background-color: #ffffff;
+        color: #333333;
+    }
+    
+    input[type="text"]::placeholder {
+        color: #cccccc; /* Lighter grey */
+    }
+    
+    button {
+        background-color: #2ecc71; /* Green color */
+        color: #ffffff; /* White color */
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #27ae60; /* Darker green color on hover */
+    }
+    
+    .cardFields {
+        display: none;
+    }
+    
+    .show {
+        display: block;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+     /* Alert Styles */
+     .alert {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 128, 0, 0.9); /* Green color */
+      color: #ffffff; /* White color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      text-align: center;
+      animation: fadeInAlert 0.5s ease-in-out;
+  }
+
+  @keyframes fadeInAlert {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+  .alert.active {
+      display: block;
+  }
+
+  .alert-content {
+      margin-bottom: 10px;
+  }
+
+  .close-btn {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .close-btn:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+  }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Payment Information</h2>
+        <form id="paymentForm">
+            <label for="cardType">Select Card Type:</label>
+            <select id="cardType" name="cardType">
+                <option value="credit">Credit Card</option>
+                <option value="debit">Debit Card</option>
+            </select>
+            <div id="creditCardFields" class="cardFields">
+                <input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="Enter Credit Card Number" required>
+                <input type="text" id="creditCardExpiry" name="creditCardExpiry" placeholder="MM/YY" required>
+                <input type="text" id="creditCardCVV" name="creditCardCVV" placeholder="CVV" required>
+            </div>
+            <div id="debitCardFields" class="cardFields">
+                <input type="text" id="debitCardNumber" name="debitCardNumber" placeholder="Enter Debit Card Number" required>
+                <input type="text" id="debitCardExpiry" name="debitCardExpiry" placeholder="MM/YY" required>
+                <input type="text" id="debitCardCVV" name="debitCardCVV" placeholder="CVV" required>
+            </div>
+            <button type="submit" onclick="showPaymentAlertAndRedirect()">Submit Payment</button>
+        </form>
+    </div>
+    <!-- Payment Success Alert -->
+    <div id="paymentSuccessAlert" class="alert">
+      <div class="alert-content">
+          <h3>Payment Successful!</h3>
+          <p>Your payment has been successfully processed.</p>
+      </div>
+  </div>
+<script src="./scripts/payment.js"></script>
+  <script>
+      function showPaymentAlertAndRedirect() {
+          // Show alert
+          document.getElementById('paymentSuccessAlert').classList.add('active');
+
+          // Redirect after 10 seconds
+          setTimeout(function() {
+              window.location.href = 'index.html';
+          }, 10000); // 10 seconds in milliseconds
+      }
+
+      document.getElementById('paymentForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // Simulate processing payment
+          setTimeout(showPaymentAlertAndRedirect, 1500); // Show alert after 1.5 seconds (1500 milliseconds)
+      });
+  </script>
+</body>
+</html>
